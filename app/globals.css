@@ -15,7 +15,7 @@
   --accent-soft: rgba(171, 130, 107, 0.12);
   --accent-warm: #d7b79f;
   --shadow-soft: 0 24px 60px rgba(37, 28, 23, 0.08);
-  --container-width: 82rem;
+  --container-width: 100rem;
 }
 
 @theme inline {

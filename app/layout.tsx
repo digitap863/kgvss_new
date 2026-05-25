@@ -4,7 +4,8 @@ import { Newsreader, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import SiteFooter from "@/components/site/site-footer";
 import SiteHeader from "@/components/site/site-header";
-import { getSiteSettings, siteMeta } from "@/lib/cms";
+import { getSiteSettings } from "@/lib/data-fetch";
+import { siteMeta } from "@/lib/static-data";
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],

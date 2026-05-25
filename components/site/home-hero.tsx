@@ -1,23 +1,84 @@
 import Image from "next/image";
 
 import ButtonLink from "@/components/site/button-link";
-import type { HeroContent, ManagedEntry, ImpactStatContent } from "@/lib/cms";
+import type { HeroContent, ManagedEntry, ImpactStatContent } from "@/lib/types";
 
-type HomeHeroProps = {
-  hero: HeroContent;
-  stats: ManagedEntry<ImpactStatContent>[];
+import home1 from "@/assets/home/home1.jpg";
+import home2 from "@/assets/home/home2.jpg";
+import home3 from "@/assets/home/home3.jpg";
+import home4 from "@/assets/home/home4.jpg";
+
+const hero = {
+  label: "Panchayat-led public infrastructure and community welfare.",
+  headline: "KERALA GRAMA VIKASANA SANITATION SOCIETY",
+  body: "Partnering with state local self-governments to deliver vital community spaces, regional sanitation initiatives, and historical monuments that enrich public life across Kerala.",
+  themes: ["Rural Sanitation", "Public Art & Monuments", "Panchayat Collaborations"],
+  primaryAction: {
+    label: "Explore Public Projects",
+    href: "#projects",
+  },
+  secondaryAction: {
+    label: "View Structural Gallery",
+    href: "#gallery",
+  },
+  collage: [
+    {
+      src: home1,
+      alt: "Public awareness installation and community mural project site.",
+      className: "object-[60%_40%]",
+    },
+    {
+      src: home4,
+      alt: "Completed Gandhi Statue memorial landscape at Edappally.",
+      className: "object-[40%_60%]",
+    },
+    {
+      src: home2,
+      alt: "Official project handover ceremony with Grama Panchayat representatives.",
+      className: "object-[50%_50%]",
+    },
+  ],
 };
 
-export default function HomeHero({ hero, stats }: HomeHeroProps) {
+
+const stats = [
+  {
+    id: "impact-1",
+    data: {
+      value: "Statewide",
+      label: "panchayat network",
+      note: "Collaborating with local self-government institutions across several districts of Kerala to execute public work tenders.",
+    },
+  },
+  {
+    id: "impact-2",
+    data: {
+      value: "CSR-Backed",
+      label: "delivery model",
+      note: "Successfully managing large-scale cultural and civic projects funded by major corporate entities like Cochin Shipyard.",
+    },
+  },
+  {
+    id: "impact-3",
+    data: {
+      value: "Community",
+      label: "awareness projects",
+      note: "Integrating public sanitation awareness with local artistry, including prison-wall social murals and public square upgrades.",
+    },
+  },
+];
+
+
+export default function HomeHero() {
   return (
-    <section className="page-section pt-30 sm:pt-34">
+    <section className="page-section pt-20 sm:pt-24">
       <div className="relative overflow-hidden rounded-[2.5rem] border border-[var(--line)] bg-[linear-gradient(160deg,rgba(255,251,245,0.92),rgba(244,234,223,0.78))] px-4 py-4 shadow-[var(--shadow-soft)] sm:px-6 sm:py-6 lg:px-7 lg:py-7">
         <div className="ambient-grid opacity-40" />
         <div className="relative grid gap-5 lg:grid-cols-[0.95fr_1.05fr]">
           <div className="flex min-h-[22rem] flex-col justify-between rounded-[2rem] bg-[rgba(255,250,244,0.72)] p-5 sm:p-7 lg:min-h-[34rem] lg:p-8">
             <div className="space-y-5">
               <span className="section-label">{hero.label}</span>
-              <h1 className="hero-title max-w-2xl text-balance text-[clamp(2.8rem,5.8vw,5.4rem)] leading-[0.96] text-[var(--foreground)]">
+              <h1 className="hero-title max-w-2xl text-balance text-[clamp(2.2rem,4.5vw,4.2rem)] leading-[0.96] text-[var(--foreground)]">
                 {hero.headline}
               </h1>
               <p className="max-w-lg text-pretty text-base leading-7 text-[var(--muted)] sm:text-lg">

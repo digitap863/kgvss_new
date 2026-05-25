@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 import ButtonLink from "@/components/site/button-link";
-import type { SiteSettings } from "@/lib/cms";
+import type { SiteSettings } from "@/lib/types";
 
 type SiteFooterProps = {
   settings: SiteSettings;

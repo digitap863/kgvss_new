@@ -3,13 +3,88 @@
 import { useState } from "react";
 import Image from "next/image";
 
-import type { GalleryEntryContent, ManagedEntry } from "@/lib/cms";
+import type { GalleryEntryContent, ManagedEntry } from "@/lib/types";
 
-type GalleryGridProps = {
-  images: ManagedEntry<GalleryEntryContent>[];
-};
+import home1 from "@/assets/home/home1.jpg";
+import home2 from "@/assets/home/home2.jpg";
+import home3 from "@/assets/home/home3.jpg";
+import home4 from "@/assets/home/home4.jpg";
+import home5 from "@/assets/home/home5.jpg";
 
-export default function GalleryGrid({ images }: GalleryGridProps) {
+const images: ManagedEntry<GalleryEntryContent>[] = [
+  {
+    id: "gallery-1",
+    slug: "community-handover",
+    order: 1,
+    data: {
+      title: "Community handover",
+      note: "Gatherings and completion moments that make implementation publicly visible.",
+      image: {
+        src: home1,
+        alt: "Collage of community gathering, public unveiling moments, and memorial installations.",
+        className: "object-[68%_48%]",
+      },
+    },
+  },
+  {
+    id: "gallery-2",
+    slug: "completed-landmark",
+    order: 2,
+    data: {
+      title: "Completed landmark",
+      note: "Finished sites that anchor long-term identity and local recognition.",
+      image: {
+        src: home2,
+        alt: "Collage of portrait busts and completed public landmarks in community settings.",
+        className: "object-[75%_46%]",
+      },
+    },
+  },
+  {
+    id: "gallery-3",
+    slug: "field-review",
+    order: 3,
+    data: {
+      title: "Field review",
+      note: "On-site coordination and implementation follow-through.",
+      image: {
+        src: home3,
+        alt: "Collage of field walkthroughs, implementation reviews, and completed installation moments.",
+        className: "object-[72%_42%]",
+      },
+    },
+  },
+  {
+    id: "gallery-4",
+    slug: "public-environment",
+    order: 4,
+    data: {
+      title: "Public environment",
+      note: "Landscaped settings and shared places that support community use.",
+      image: {
+        src: home4,
+        alt: "Collage of landscaped visitor spaces, community grounds, and finished public environments.",
+        className: "object-[78%_44%]",
+      },
+    },
+  },
+  {
+    id: "gallery-5",
+    slug: "archive-collage",
+    order: 5,
+    data: {
+      title: "Archive collage",
+      note: "A single view of project memory, field effort, and completed outcomes.",
+      image: {
+        src: home5,
+        alt: "Project archive collage combining ceremonies, Gandhi memorial imagery, and field documentation.",
+        className: "object-[70%_48%]",
+      },
+    },
+  },
+];
+
+export default function GalleryGrid() {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
 
   const selectedImage = selectedIndex === null ? null : images[selectedIndex];

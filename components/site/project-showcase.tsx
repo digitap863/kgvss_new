@@ -1,14 +1,122 @@
 import Image from "next/image";
 
-import type { ManagedEntry, ProjectEntryContent } from "@/lib/cms";
+import type { ManagedEntry, ProjectEntryContent } from "@/lib/types";
 
-type ProjectShowcaseProps = {
-  projects: ManagedEntry<ProjectEntryContent>[];
-};
+import ruralSanitation from "@/assets/projects/ruralSanitation.jpg";
+import wasteManagement from "@/assets/projects/wasteManagement.webp";
+import waterConservation from "@/assets/projects/waterconservation.png";
+import  livelihood from "@/assets/projects/livelihood.jpg";
 
-export default function ProjectShowcase({ projects }: ProjectShowcaseProps) {
+const projects: ManagedEntry<ProjectEntryContent>[] = [
+  {
+    id: "activity-1",
+    slug: "toilet-construction",
+    order: 1,
+    data: {
+      label: "Activity",
+      category: "Sanitation",
+      title: "Toilet Construction",
+      location: "Rural Areas",
+      summary:
+        "Construct toilets and promote proper sanitation practices in rural areas.",
+      impact:
+        "Improving public health and hygiene standards in communities.",
+      metrics: [
+        "Infrastructure development",
+        "Community health",
+        "Sanitation practices",
+      ],
+      tags: ["Sanitation", "Health", "Infrastructure"],
+      cover: {
+        src: ruralSanitation,
+        alt: "Toilet construction and sanitation in rural areas.",
+        className: "object-[68%_48%]",
+      },
+    },
+  },
+  {
+    id: "activity-2",
+    slug: "waste-management",
+    order: 2,
+    data: {
+      label: "Activity",
+      category: "Environment",
+      title: "Waste Management",
+      location: "Community Level",
+      summary:
+        "Implement waste management systems, including composting and recycling.",
+      impact:
+        "Creating cleaner and more sustainable living environments.",
+      metrics: [
+        "Composting systems",
+        "Recycling promotion",
+        "Waste reduction",
+      ],
+      tags: ["Waste Management", "Recycling", "Sustainability"],
+      cover: {
+        src: wasteManagement,
+        alt: "Waste management and recycling implementation.",
+        className: "object-[78%_44%]",
+      },
+    },
+  },
+  {
+    id: "activity-3",
+    slug: "water-conservation",
+    order: 3,
+    data: {
+      label: "Activity",
+      category: "Water Conservation",
+      title: "Water Conservation",
+      location: "Shared Local Environments",
+      summary:
+        "Promote water conservation practices, including rainwater harvesting.",
+      impact:
+        "Ensuring long-term water security and sustainable resource usage.",
+      metrics: [
+        "Rainwater harvesting",
+        "Resource conservation",
+        "Water security",
+      ],
+      tags: ["Water", "Conservation", "Harvesting"],
+      cover: {
+        src: waterConservation,
+        alt: "Water conservation and rainwater harvesting practices.",
+        className: "object-[72%_42%]",
+      },
+    },
+  },
+  {
+    id: "activity-4",
+    slug: "livelihood-promotion",
+    order: 4,
+    data: {
+      label: "Activity",
+      category: "Livelihood",
+      title: "Livelihood Promotion",
+      location: "Local Communities",
+      summary:
+        "Support livelihood promotion activities, including agriculture, animal husbandry, and handicrafts.",
+      impact:
+        "Empowering individuals and strengthening local economies.",
+      metrics: [
+        "Agricultural support",
+        "Animal husbandry",
+        "Handicrafts promotion",
+      ],
+      tags: ["Agriculture", "Empowerment", "Handicrafts"],
+      cover: {
+        src: livelihood,
+        alt: "Livelihood promotion through agriculture and handicrafts.",
+        className: "object-[72%_42%]",
+      },
+    },
+  },
+];
+
+export default function ProjectShowcase() {
   return (
-    <section id="work" className="page-section scroll-mt-28 pt-24 sm:pt-28">
+    <section id="work" className="page-section scroll-mt-28 pt-12 sm:pt-16">
       <div className="space-y-7">
         {projects.map((project, index) => {
           const reverse = index % 2 === 1;

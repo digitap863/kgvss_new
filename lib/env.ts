@@ -1,7 +1,7 @@
 export const env = {
-  mongodbUri: process.env.MONGODB_URI,
-  jwtSecret: process.env.JWT_SECRET ?? "development-only-change-me",
-  adminCookieName: process.env.ADMIN_COOKIE_NAME ?? "kgvss_admin_token",
+  mongodbUri: "mongodb+srv://Tapclone_irs:Tapclone%40123%40@cluster0.prco7.mongodb.net/kgvss",
+  jwtSecret: "replace-with-a-long-random-secret",
+  adminCookieName: "kgvss_admin_token",
   nodeEnv: process.env.NODE_ENV ?? "development",
 };
 

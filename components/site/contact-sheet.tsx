@@ -1,18 +1,75 @@
 import Link from "next/link";
 
 import ButtonLink from "@/components/site/button-link";
-import type { ContactContent, SiteSettings } from "@/lib/cms";
+import type { ContactContent, SiteSettings } from "@/lib/types";
+
+const contact = {
+  label: "Contact",
+  title: "Partner with KGVSS for public sanitation, infrastructure, and civic installations.",
+  body: "For Grama Panchayat tenders, public square structural execution, or local corporate social responsibility (CSR) project coordination, our office stays readily accessible.",
+  topics: [
+    "Panchayat Infrastructure Tenders",
+    "Public Memorials & Statue Sculpting",
+    "Rural Cleanliness Awareness Drives",
+    "Corporate CSR Partnerships",
+  ],
+  primaryAction: {
+    label: "Email KGVSS Office",
+    href: "mailto:info@keralagvssociety.com",
+  },
+  emails: [
+    "info@keralagvssociety.com",
+    "secretarykgvss@gmail.com",
+  ],
+  phones: [
+    "+91 90373 57215",
+    "+91 95262 88250",
+    "+91 90487 35728",
+    "+91 90370 25900"
+  ],
+  addresses: [
+    {
+      title: "Thrissur Office (Registered Hub)",
+      lines: [
+        "No: 383/96/TCR/KERALA",
+        "Gramapanchayath Building",
+        "Vazhakkode, Mullurkkara",
+        "Thrissur, Kerala - 680580"
+      ]
+    },
+    {
+      title: "Cochin Office (Operations)",
+      lines: [
+        "Kerala Grama Vikasana Sanitation Society",
+        "42/2905, Near Vennala Co-operative Bank Head Office",
+        "Arakadavu Road, Vennala P.O.",
+        "Cochin, Kerala - 682028"
+      ]
+    }
+  ],
+  associatedPartner: {
+    title: "Cheraas India Branding (CIB) & Sculptures",
+    email: "cheraasinda@gmail.com",
+    address: [
+      "42/2905, Near Vennala Co-operative Bank Head Office",
+      "Arakadavu Road, Vennala P.O.",
+      "Cochin, Kerala - 682028"
+    ]
+  }
+};
+
 
 type ContactSheetProps = {
-  contact: ContactContent;
   settings: SiteSettings;
 };
 
-export default function ContactSheet({ contact, settings }: ContactSheetProps) {
+export default function ContactSheet({ settings }: ContactSheetProps) {
   return (
-    <section id="contact" className="page-section scroll-mt-28 pt-24 sm:pt-28">
+    <section id="contact" className="page-section scroll-mt-28 pt-12 sm:pt-16">
       <div className="overflow-hidden rounded-[2.4rem] border border-[var(--line)] bg-[linear-gradient(135deg,rgba(104,64,48,0.96),rgba(45,39,36,0.92))] px-6 py-8 text-white shadow-[var(--shadow-soft)] sm:px-8 sm:py-10 lg:px-10">
         <div className="grid gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-end">
+
+          {/* Left: heading, description, topics */}
           <div className="space-y-5">
             <span className="section-label !border-white/12 !bg-white/10 !text-white/72">
               {contact.label}
@@ -34,47 +91,59 @@ export default function ContactSheet({ contact, settings }: ContactSheetProps) {
             </div>
           </div>
 
-          <div className="grid gap-4 rounded-[2rem] border border-white/12 bg-white/8 p-5 sm:p-6">
-            <div>
-              <p className="text-sm font-semibold uppercase tracking-[0.16em] text-white/58">
-                Email
-              </p>
-              <Link
-                href={`mailto:${settings.email}`}
-                className="mt-2 inline-block text-2xl font-semibold tracking-[-0.04em] text-white hover:text-white/80"
-              >
-                {settings.email}
-              </Link>
+          {/* Right: addresses + phones + emails */}
+          <div className="flex flex-col gap-5">
+
+            {/* Addresses row */}
+            <div className="grid grid-cols-1 gap-5 sm:grid-cols-3">
+              {contact.addresses?.map((address, idx) => (
+                <div key={idx} className="text-sm leading-6 text-white/80">
+                  <p className="mb-1 text-xs font-semibold uppercase tracking-wider text-white/50">
+                    {address.title}
+                  </p>
+                  {address.lines.map((line, lineIdx) => (
+                    <p key={lineIdx}>{line}</p>
+                  ))}
+                </div>
+              ))}
             </div>
 
-            <div>
-              <p className="text-sm font-semibold uppercase tracking-[0.16em] text-white/58">
-                Phone
-              </p>
-              <Link
-                href={`tel:${settings.phone.replace(/\s+/g, "")}`}
-                className="mt-2 inline-block text-2xl font-semibold tracking-[-0.04em] text-white hover:text-white/80"
-              >
-                {settings.phone}
-              </Link>
+            {/* Divider */}
+            <div className="border-t border-white/10" />
+
+            {/* Phones + Emails row */}
+            <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
+              <div className="flex flex-col gap-1">
+                <p className="mb-1 text-xs font-semibold uppercase tracking-wider text-white/50">
+                  Phone
+                </p>
+                {contact.phones?.map((phone) => (
+                  <Link
+                    key={phone}
+                    href={`tel:${phone.replace(/\s+/g, "")}`}
+                    className="text-sm text-white/90 hover:text-white"
+                  >
+                    {phone}
+                  </Link>
+                ))}
+              </div>
+
+              <div className="flex flex-col gap-1">
+                <p className="mb-1 text-xs font-semibold uppercase tracking-wider text-white/50">
+                  Email
+                </p>
+                {contact.emails?.map((email) => (
+                  <Link
+                    key={email}
+                    href={`mailto:${email}`}
+                    className="text-sm text-white/90 hover:text-white"
+                  >
+                    {email}
+                  </Link>
+                ))}
+              </div>
             </div>
 
-            <div>
-              <p className="text-sm font-semibold uppercase tracking-[0.16em] text-white/58">
-                Location
-              </p>
-              <p className="mt-2 text-base leading-7 text-white/76">{settings.location}</p>
-            </div>
-
-            <div className="pt-2">
-              <ButtonLink
-                href={contact.primaryAction.href}
-                variant="secondary"
-                className="w-fit border-white/12 bg-white/10 text-white hover:bg-white/16"
-              >
-                {contact.primaryAction.label}
-              </ButtonLink>
-            </div>
           </div>
         </div>
       </div>
