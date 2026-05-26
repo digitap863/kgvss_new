@@ -1,7 +1,6 @@
 import Link from "next/link";
 
-import ButtonLink from "@/components/site/button-link";
-import type { ContactContent, SiteSettings } from "@/lib/types";
+import type { SiteSettings } from "@/lib/types";
 
 const contact = {
   label: "Contact",
@@ -63,9 +62,13 @@ type ContactSheetProps = {
   settings: SiteSettings;
 };
 
-export default function ContactSheet({ settings }: ContactSheetProps) {
+export default function ContactSheet({ settings: _settings }: ContactSheetProps) {
   return (
-    <section id="contact" className="page-section scroll-mt-28 pt-12 sm:pt-16">
+    <section
+      id="contact"
+      className="page-section scroll-mt-28 pt-12 sm:pt-16"
+      aria-label={`${_settings.siteName} contact information`}
+    >
       <div className="overflow-hidden rounded-[2.4rem] border border-[var(--line)] bg-[linear-gradient(135deg,rgba(104,64,48,0.96),rgba(45,39,36,0.92))] px-6 py-8 text-white shadow-[var(--shadow-soft)] sm:px-8 sm:py-10 lg:px-10">
         <div className="grid gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-end">
 

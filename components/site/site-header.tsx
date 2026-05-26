@@ -54,9 +54,9 @@ export default function SiteHeader({ settings }: SiteHeaderProps) {
                 <p className="truncate text-sm font-semibold uppercase tracking-[0.18em] text-[var(--accent-strong)]">
                   {settings.siteName}
                 </p>
-                <p className="hidden truncate text-sm text-[var(--muted)] sm:block">
+                {/* <p className="hidden truncate text-sm text-[var(--muted)] sm:block">
                   Rural work in view
-                </p>
+                </p> */}
               </div>
             </Link>
 

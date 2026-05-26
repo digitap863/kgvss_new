@@ -1,3 +1,4 @@
+import AboutSection from "@/components/site/about-section";
 import ContactSheet from "@/components/site/contact-sheet";
 import GalleryGrid from "@/components/site/gallery-grid";
 import HomeHero from "@/components/site/home-hero";
@@ -10,6 +11,7 @@ export default async function Home() {
   return (
     <div className="pb-10 sm:pb-14">
       <HomeHero />
+      <AboutSection />
       <ProjectShowcase />
       <section id="gallery" className="page-section scroll-mt-28 pt-12 sm:pt-16">
         <div className="mb-6 flex flex-col gap-4 sm:mb-8 lg:flex-row lg:items-end lg:justify-between">
