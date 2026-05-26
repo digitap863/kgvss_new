@@ -6,10 +6,10 @@ import { useState, useEffect } from "react";
 
 import ButtonLink from "@/components/site/button-link";
 
-import home1 from "@/assets/home/home1.jpg";
-import home2 from "@/assets/home/home2.jpg";
-import home3 from "@/assets/home/home3.jpg";
-import home4 from "@/assets/home/home4.jpg";
+import home1 from "@/assets/home/Banner1.png";
+import home2 from "@/assets/home/Banner2.png";
+import home3 from "@/assets/home/Banner3.png";
+// import home4 from "@/assets/home/Banner4.png";
 
 // ─── ALL IMAGES IN ORDER ──────────────────────────────────────────────────────
 // The conveyor belt cycles through this list continuously.
@@ -17,7 +17,7 @@ import home4 from "@/assets/home/home4.jpg";
 
 const allImages = [
   { src: home1, alt: "Public awareness installation and community mural project site." },
-  { src: home4, alt: "Completed Gandhi Statue memorial landscape at Edappally." },
+  // { src: home4, alt: "Completed Gandhi Statue memorial landscape at Edappally." },
   { src: home2, alt: "Official project handover ceremony with Grama Panchayat representatives." },
   { src: home3, alt: "Community gathering at Panchayat event." },
 ];

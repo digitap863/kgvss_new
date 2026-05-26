@@ -1,19 +1,15 @@
 import logo from "@/assets/logo/logo.jpg";
 import home1 from "@/assets/home/home1.jpg";
-import home2 from "@/assets/home/home2.jpg";
 import home3 from "@/assets/home/home3.jpg";
 import home4 from "@/assets/home/home4.jpg";
 import home5 from "@/assets/home/home5.jpg";
 
 import type {
   ContactContent,
-  GalleryEntryContent,
   HeroContent,
-  ImpactStatContent,
   ManagedEntry,
   ProjectEntryContent,
   SiteSettings,
-  StoryStageContent,
 } from "./types";
 
 export const siteSettings: SiteSettings = {
@@ -32,15 +28,12 @@ export const siteSettings: SiteSettings = {
   },
   primaryNavigation: [
     { id: "home", label: "Home", href: "/" },
-    { id: "gallery", label: "Gallery", href: "/gallery" },
-    { id: "about", label: "About", href: "/about" },
+    { id: "news", label: "News & Events", href: "/news" },
     { id: "contact", label: "Contact", href: "/contact" },
   ],
   footerNavigation: [
     { id: "home", label: "Home", href: "/" },
-    { id: "work", label: "Work", href: "/#work" },
-    { id: "gallery", label: "Gallery", href: "/gallery" },
-    { id: "about", label: "About", href: "/about" },
+    { id: "news", label: "News & Events", href: "/news" },
     { id: "contact", label: "Contact", href: "/contact" },
   ],
 };
@@ -190,165 +183,8 @@ export const featuredProjects: ManagedEntry<ProjectEntryContent>[] = [
   },
 ];
 
-export const storyStages: ManagedEntry<StoryStageContent>[] = [
-  {
-    id: "story-need",
-    slug: "shared-need",
-    order: 1,
-    data: {
-      label: "Before",
-      title:
-        "Shared needs are identified through the site, not from a distant dashboard.",
-      note:
-        "The process begins by reading local conditions, public use, and maintenance reality before any solution is shaped.",
-      metric: "Ground-level listening first",
-      image: {
-        src: home4,
-        alt: "Collage of landscaped visitor spaces, community grounds, and finished public environments.",
-        className: "object-[78%_44%]",
-      },
-    },
-  },
-  {
-    id: "story-field",
-    slug: "field-implementation",
-    order: 2,
-    data: {
-      label: "In the field",
-      title:
-        "Walkthroughs, reviews, and implementation checks keep the work responsive.",
-      note:
-        "Progress is visible through people, visits, and site movement rather than heavy process language.",
-      metric: "Field-led coordination",
-      image: {
-        src: home3,
-        alt: "Collage of field walkthroughs, implementation reviews, and completed installation moments.",
-        className: "object-[72%_42%]",
-      },
-    },
-  },
-  {
-    id: "story-completion",
-    slug: "completed-initiative",
-    order: 3,
-    data: {
-      label: "After",
-      title:
-        "Completed initiatives become part of everyday community memory and use.",
-      note:
-        "Public handovers, finished spaces, and repeat visits help a project remain legible after completion.",
-      metric: "Visible completed outcomes",
-      image: {
-        src: home2,
-        alt: "Collage of portrait busts and completed public landmarks in community settings.",
-        className: "object-[75%_46%]",
-      },
-    },
-  },
-];
 
-export const impactStats: ManagedEntry<ImpactStatContent>[] = [
-  {
-    id: "impact-1",
-    slug: "implementation-footprint",
-    order: 1,
-    data: {
-      value: "15+",
-      label: "years of documented work",
-      note: "A long-running body of field activity and completed initiatives across Kerala.",
-    },
-  },
-  {
-    id: "impact-2",
-    slug: "archive-sets",
-    order: 2,
-    data: {
-      value: "5",
-      label: "core visual archives",
-      note: "Enough structure to tell the story through real local assets instead of placeholders.",
-    },
-  },
-  {
-    id: "impact-3",
-    slug: "field-model",
-    order: 3,
-    data: {
-      value: "Field-led",
-      label: "delivery approach",
-      note: "Listening, coordination, site visits, and public handovers remain central.",
-    },
-  },
-];
 
-export const gallery: ManagedEntry<GalleryEntryContent>[] = [
-  {
-    id: "gallery-1",
-    slug: "community-handover",
-    order: 1,
-    data: {
-      title: "Community handover",
-      note: "Gatherings and completion moments that make implementation publicly visible.",
-      image: {
-        src: home1,
-        alt: "Collage of community gathering, public unveiling moments, and memorial installations.",
-        className: "object-[68%_48%]",
-      },
-    },
-  },
-  {
-    id: "gallery-2",
-    slug: "completed-landmark",
-    order: 2,
-    data: {
-      title: "Completed landmark",
-      note: "Finished sites that anchor long-term identity and local recognition.",
-      image: {
-        src: home2,
-        alt: "Collage of portrait busts and completed public landmarks in community settings.",
-        className: "object-[75%_46%]",
-      },
-    },
-  },
-  {
-    id: "gallery-3",
-    slug: "field-review",
-    order: 3,
-    data: {
-      title: "Field review",
-      note: "On-site coordination and implementation follow-through.",
-      image: {
-        src: home3,
-        alt: "Collage of field walkthroughs, implementation reviews, and completed installation moments.",
-        className: "object-[72%_42%]",
-      },
-    },
-  },
-  {
-    id: "gallery-4",
-    slug: "public-environment",
-    order: 4,
-    data: {
-      title: "Public environment",
-      note: "Landscaped settings and shared places that support community use.",
-      image: {
-        src: home4,
-        alt: "Collage of landscaped visitor spaces, community grounds, and finished public environments.",
-        className: "object-[78%_44%]",
-      },
-    },
-  },
-  {
-    id: "gallery-5",
-    slug: "archive-collage",
-    order: 5,
-    data: {
-      title: "Archive collage",
-      note: "A single view of project memory, field effort, and completed outcomes.",
-      image: {
-        src: home5,
-        alt: "Project archive collage combining ceremonies, Gandhi memorial imagery, and field documentation.",
-        className: "object-[70%_48%]",
-      },
-    },
-  },
-];
+
+
+

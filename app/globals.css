@@ -16,6 +16,8 @@
   --accent-warm: #d7b79f;
   --shadow-soft: 0 24px 60px rgba(37, 28, 23, 0.08);
   --container-width: 100rem;
+  --font-sans: "Segoe UI", "Inter", "Helvetica Neue", Arial, sans-serif;
+  --font-serif: Georgia, "Times New Roman", serif;
 }
 
 @theme inline {
