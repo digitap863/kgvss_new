@@ -66,6 +66,14 @@ export type ProjectEntryContent = {
   cover: ImageAsset;
 };
 
+export type NewsEventContent = {
+  type: "News" | "Event";
+  date: string;
+  title: string;
+  description: string;
+  image: ImageAsset;
+};
+
 export type StoryStageContent = {
   label: string;
   title: string;

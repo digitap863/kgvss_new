@@ -3,11 +3,17 @@ import home1 from "@/assets/home/home1.jpg";
 import home3 from "@/assets/home/home3.jpg";
 import home4 from "@/assets/home/home4.jpg";
 import home5 from "@/assets/home/home5.jpg";
+import galleryPic10 from "@/assets/gallery/pic10.jpg";
+import galleryPic18 from "@/assets/home/Banner1.png";
+import galleryPic25 from "@/assets/gallery/pic25.jpg";
+import galleryPic35 from "@/assets/gallery/pic35.jpg";
 
 import type {
   ContactContent,
+  GalleryEntryContent,
   HeroContent,
   ManagedEntry,
+  NewsEventContent,
   ProjectEntryContent,
   SiteSettings,
 } from "./types";
@@ -183,8 +189,137 @@ export const featuredProjects: ManagedEntry<ProjectEntryContent>[] = [
   },
 ];
 
+export const newsEvents: ManagedEntry<NewsEventContent>[] = [
+  {
+    id: "event-community-sanitation-review",
+    slug: "community-sanitation-review",
+    order: 1,
+    featured: true,
+    data: {
+      type: "Event",
+      date: "June 2026",
+      title: "Community sanitation review and awareness session",
+      description:
+        "KGVSS teams joined local representatives and residents for a practical review of sanitation access, upkeep needs, and hygiene awareness. The session focused on daily use, shared responsibility, and the small maintenance habits that keep public facilities dignified after handover.",
+      image: {
+        src: galleryPic10,
+        alt: "Community members gathered for a field awareness session.",
+        className: "object-[52%_42%]",
+      },
+    },
+  },
+  {
+    id: "news-water-conservation-field-visit",
+    slug: "water-conservation-field-visit",
+    order: 2,
+    data: {
+      type: "News",
+      date: "May 2026",
+      title: "കേരള ഹൈക്കോടതിയിൽ ഗാന്ധി പ്രതിമ അനാവരണം ചെയ്തു",
+      description:
+        `
 
+കൊച്ചി: കേരള ഹൈക്കോടതിയിൽ മഹാത്മാന്ധിയുടെ പ്രതിമ സ്ഥാപിച്ചു. ഹൈക്കോടതി അങ്കണത്തിൽ സ്ഥാപിച്ച ഗാന്ധി പ്രതിമ ചീഫ് ജസ്റ്റീസ് ആഷിഷ് ജിതേന്ദ്ര ദേശായി അനാവരണം ചെയ്തു.
 
+പ്രശസ്ത ശില്പി ചേരാസ് രവിദാസ് ആണ് ഗാന്ധിപ്രതിമ തയ്യാറാക്കിയത്. പ്രത്യേകം തയ്യാറാക്കിയ പീഠത്തിൽ നാലര അടി ഉയരമുള്ള പ്രതിമയാണ് സ്ഥാപിച്ചിരിക്കുന്നത്.ഗാന്ധി പ്രതിമ രൂപകൽപ്പന ചെയ്ത ചേരാസ് രവിദാസിനെ ചീഫ് ജസ്റ്റീസ് അനുമോദിച്ചു. `,
+      image: {
+        src: galleryPic18,
+        alt: "Field documentation from a water conservation site visit.",
+        className: "object-[60%_46%]",
+      },
+    },
+  },
+  {
+    id: "event-rural-development-handover",
+    slug: "rural-development-handover",
+    order: 3,
+    data: {
+      type: "Event",
+      date: "April 2026",
+      title: "Rural development handover brings project partners together",
+      description:
+        "A local handover gathering brought project workers, community members, and partner representatives together to mark completion of a rural development activity. The event emphasized clear documentation, public visibility, and continued local stewardship.",
+      image: {
+        src: galleryPic25,
+        alt: "Public handover gathering for a rural development activity.",
+        className: "object-[50%_45%]",
+      },
+    },
+  },
+  {
+    id: "news-public-space-documentation",
+    slug: "public-space-documentation",
+    order: 4,
+    data: {
+      type: "News",
+      date: "March 2026",
+      title: "Project archive updated with public space documentation",
+      description:
+        "New image records have been added to the project archive, showing public space improvements, completed installations, and field review moments. These updates make the work easier to browse and help future planning start from visible evidence.",
+      image: {
+        src: galleryPic35,
+        alt: "Completed public space documented for the project archive.",
+        className: "object-[58%_44%]",
+      },
+    },
+  },
+];
 
-
-
+export const galleryEntries: ManagedEntry<GalleryEntryContent>[] = [
+  {
+    id: "admin-gallery-community-session",
+    slug: "community-session",
+    order: 1,
+    data: {
+      title: "Community session",
+      note: "A field gathering documented for the public visual archive.",
+      image: {
+        src: galleryPic10,
+        alt: "Community members gathered for a field session.",
+        className: "object-[52%_42%]",
+      },
+    },
+  },
+  {
+    id: "admin-gallery-field-documentation",
+    slug: "field-documentation",
+    order: 2,
+    data: {
+      title: "Field documentation",
+      note: "Site documentation captured during project review.",
+      image: {
+        src: galleryPic18,
+        alt: "Field documentation image.",
+        className: "object-[60%_46%]",
+      },
+    },
+  },
+  {
+    id: "admin-gallery-public-handover",
+    slug: "public-handover",
+    order: 3,
+    data: {
+      title: "Public handover",
+      note: "A handover moment from rural development activity.",
+      image: {
+        src: galleryPic25,
+        alt: "Public handover gathering.",
+        className: "object-[50%_45%]",
+      },
+    },
+  },
+  {
+    id: "admin-gallery-community-space",
+    slug: "community-space",
+    order: 4,
+    data: {
+      title: "Community space",
+      note: "Completed public space recorded for the archive.",
+      image: {
+        src: galleryPic35,
+        alt: "Completed public space.",
+        className: "object-[58%_44%]",
+      },
+    },
+  },
+];

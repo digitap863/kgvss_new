@@ -13,9 +13,9 @@ import statue1 from "@/assets/projects/statue1.jpg";
 import statue2 from "@/assets/projects/statue2.jpg";
 import statue3 from "@/assets/projects/statue3.jpeg";
 import statue5 from "@/assets/projects/statue5.jpeg";
+import statue6 from "@/assets/projects/statue6.png";
 
 // ─── FEATURED DATA ────────────────────────────────────────────────────────────
-// Each featured item has multiple images that cycle automatically.
 
 const featured = [
   {
@@ -30,6 +30,7 @@ const featured = [
       { src: statue2,   alt: "Artist team working on a public monument." },
       { src: statue3, alt: "Completed sculpture at public space." },
       { src: statue5, alt: "Completed sculpture at public space." },
+      { src: statue6, alt: "Completed sculpture at public space." },
     ],
   }
 ];

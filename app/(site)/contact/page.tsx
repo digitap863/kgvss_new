@@ -14,7 +14,7 @@ export default async function ContactPage() {
 
   return (
     <div className="pb-10 sm:pb-14">
-      {/* <section className="page-section pt-36 sm:pt-40">
+      <section className="page-section pt-36 sm:pt-40">
         <div className="max-w-3xl space-y-5">
           <span className="section-label">Contact</span>
           <h1 className="hero-title text-balance text-[clamp(2.9rem,5.4vw,5rem)] leading-[0.98] text-[var(--foreground)]">
@@ -26,7 +26,7 @@ export default async function ContactPage() {
         </div>
       </section>
 
-      <ContactSheet settings={settings} /> */}
+      <ContactSheet settings={settings} />
     </div>
   );
 }

@@ -5,562 +5,18 @@ import Image from "next/image";
 
 import type { GalleryEntryContent, ManagedEntry } from "@/lib/types";
 
-// import home1 from "@/assets/home/home1.jpg";
-// import home2 from "@/assets/home/home2.jpg";
-// import home3 from "@/assets/home/home3.jpg";
-// import home4 from "@/assets/home/home4.jpg";
-// import home5 from "@/assets/home/home5.jpg";
-import img1 from "@/assets/gallery/pic1.jpg";
-import img2 from "@/assets/gallery/pic2.jpg";
-import img3 from "@/assets/gallery/pic3.jpg";
-import img4 from "@/assets/gallery/pic4.jpg";
-import img5 from "@/assets/gallery/pic5.jpg";
-import img6 from "@/assets/gallery/pic6.jpg";
-import img7 from "@/assets/gallery/pic7.jpg";
-import img8 from "@/assets/gallery/pic8.jpg";
-import img9 from "@/assets/gallery/pic9.jpg";
-import img10 from "@/assets/gallery/pic10.jpg";
-import img11 from "@/assets/gallery/pic11.jpg";
-import img12 from "@/assets/gallery/pic12.jpg";
-import img13 from "@/assets/gallery/pic13.jpg";
-import img14 from "@/assets/gallery/pic14.jpg";
-import img15 from "@/assets/gallery/pic15.jpg";
-import img16 from "@/assets/gallery/pic16.jpg";
-import img17 from "@/assets/gallery/pic17.jpg";
-import img18 from "@/assets/gallery/pic18.jpg";
-import img19 from "@/assets/gallery/pic19.jpg";
-import img20 from "@/assets/gallery/pic20.jpg";
-import img21 from "@/assets/gallery/pic21.jpg";
-import img22 from "@/assets/gallery/pic22.jpg";
-import img23 from "@/assets/gallery/pic23.jpg";
-import img24 from "@/assets/gallery/pic24.jpg";
-import img25 from "@/assets/gallery/pic25.jpg";
-import img26 from "@/assets/gallery/pic26.jpg";
-import img27 from "@/assets/gallery/pic27.jpg";
-import img28 from "@/assets/gallery/pic28.jpg";
-import img29 from "@/assets/gallery/pic29.jpg";
-import img30 from "@/assets/gallery/pic30.jpg";
-import img31 from "@/assets/gallery/pic31.jpg";
-import img32 from "@/assets/gallery/pic32.jpg";
-import img33 from "@/assets/gallery/pic33.jpg";
-import img34 from "@/assets/gallery/pic34.jpg";
-import img35 from "@/assets/gallery/pic35.jpg";
-import img36 from "@/assets/gallery/pic36.jpg";
-
-const images: ManagedEntry<GalleryEntryContent>[] = [
-  {
-    id: "gallery-1",
-    slug: "community-handover",
-    order: 1,
-    data: {
-      title: "Community handover",
-      note: "Gatherings and completion moments that make implementation publicly visible.",
-      image: {
-        src: img1,
-        alt: "Community gathering and public unveiling moments.",
-        className: "object-[68%_48%]",
-      },
-    },
-  },
-  {
-    id: "gallery-2",
-    slug: "completed-landmark",
-    order: 2,
-    data: {
-      title: "Completed landmark",
-      note: "Finished sites that anchor long-term identity and local recognition.",
-      image: {
-        src: img2,
-        alt: "Portrait busts and completed public landmarks.",
-        className: "object-[75%_46%]",
-      },
-    },
-  },
-  {
-    id: "gallery-3",
-    slug: "field-review",
-    order: 3,
-    data: {
-      title: "Field review",
-      note: "On-site coordination and implementation follow-through.",
-      image: {
-        src: img3,
-        alt: "Field walkthroughs and implementation reviews.",
-        className: "object-[72%_42%]",
-      },
-    },
-  },
-  {
-    id: "gallery-4",
-    slug: "public-environment",
-    order: 4,
-    data: {
-      title: "Public environment",
-      note: "Landscaped settings and shared places that support community use.",
-      image: {
-        src: img4,
-        alt: "Landscaped visitor spaces and community grounds.",
-        className: "object-[78%_44%]",
-      },
-    },
-  },
-  {
-    id: "gallery-5",
-    slug: "archive-collage",
-    order: 5,
-    data: {
-      title: "Archive collage",
-      note: "A single view of project memory, field effort, and completed outcomes.",
-      image: {
-        src: img5,
-        alt: "Project archive collage with ceremonies and field documentation.",
-        className: "object-[70%_48%]",
-      },
-    },
-  },
-  {
-    id: "gallery-6",
-    slug: "groundbreaking",
-    order: 6,
-    data: {
-      title: "Groundbreaking ceremony",
-      note: "Inaugural moments marking the start of construction.",
-      image: {
-        src: img6,
-        alt: "Groundbreaking ceremony.",
-        className: "object-center",
-      },
-    },
-  },
-  {
-    id: "gallery-7",
-    slug: "site-survey",
-    order: 7,
-    data: {
-      title: "Site survey",
-      note: "Early assessment walks across the project terrain.",
-      image: {
-        src: img7,
-        alt: "Site survey walk.",
-        className: "object-center",
-      },
-    },
-  },
-  {
-    id: "gallery-8",
-    slug: "foundation",
-    order: 8,
-    data: {
-      title: "Foundation laying",
-      note: "Structural milestones captured before completion.",
-      image: {
-        src: img8,
-        alt: "Foundation laying.",
-        className: "object-center",
-      },
-    },
-  },
-  {
-    id: "gallery-9",
-    slug: "workshop",
-    order: 9,
-    data: {
-      title: "Community workshop",
-      note: "Participatory sessions shaping design decisions.",
-      image: {
-        src: img9,
-        alt: "Community workshop.",
-        className: "object-center",
-      },
-    },
-  },
-  {
-    id: "gallery-10",
-    slug: "concept",
-    order: 10,
-    data: {
-      title: "Concept presentation",
-      note: "Design proposals shared with stakeholders.",
-      image: {
-        src: img10,
-        alt: "Concept presentation.",
-        className: "object-center",
-      },
-    },
-  },
-  {
-    id: "gallery-11",
-    slug: "materials",
-    order: 11,
-    data: {
-      title: "Materials selection",
-      note: "Texture and palette decisions for the built environment.",
-      image: {
-        src: img11,
-        alt: "Materials selection.",
-        className: "object-center",
-      },
-    },
-  },
-  {
-    id: "gallery-12",
-    slug: "signage",
-    order: 12,
-    data: {
-      title: "Signage installation",
-      note: "Wayfinding elements placed across the site.",
-      image: {
-        src: img12,
-        alt: "Signage installation.",
-        className: "object-center",
-      },
-    },
-  },
-  {
-    id: "gallery-13",
-    slug: "lighting",
-    order: 13,
-    data: {
-      title: "Lighting design",
-      note: "Evening ambiance tested during implementation.",
-      image: {
-        src: img13,
-        alt: "Lighting design.",
-        className: "object-center",
-      },
-    },
-  },
-  {
-    id: "gallery-14",
-    slug: "planting",
-    order: 14,
-    data: {
-      title: "Planting programme",
-      note: "Native species arranged across the landscape.",
-      image: {
-        src: img14,
-        alt: "Planting programme.",
-        className: "object-center",
-      },
-    },
-  },
-  {
-    id: "gallery-15",
-    slug: "water",
-    order: 15,
-    data: {
-      title: "Water feature",
-      note: "Reflective elements integrated into open spaces.",
-      image: {
-        src: img15,
-        alt: "Water feature.",
-        className: "object-center",
-      },
-    },
-  },
-  {
-    id: "gallery-16",
-    slug: "memorial",
-    order: 16,
-    data: {
-      title: "Memorial dedication",
-      note: "Formal ceremonies marking the completed tribute.",
-      image: {
-        src: img16,
-        alt: "Memorial dedication.",
-        className: "object-center",
-      },
-    },
-  },
-  {
-    id: "gallery-17",
-    slug: "youth",
-    order: 17,
-    data: {
-      title: "Youth engagement",
-      note: "Activities connecting the next generation to the space.",
-      image: {
-        src: img17,
-        alt: "Youth engagement.",
-        className: "object-center",
-      },
-    },
-  },
-  {
-    id: "gallery-18",
-    slug: "media",
-    order: 18,
-    data: {
-      title: "Media documentation",
-      note: "Press walkthroughs and broadcast coverage.",
-      image: {
-        src: img18,
-        alt: "Media documentation.",
-        className: "object-center",
-      },
-    },
-  },
-  {
-    id: "gallery-19",
-    slug: "stakeholder",
-    order: 19,
-    data: {
-      title: "Stakeholder handover",
-      note: "Formal transfer of stewardship to community bodies.",
-      image: {
-        src: img19,
-        alt: "Stakeholder handover.",
-        className: "object-center",
-      },
-    },
-  },
-  {
-    id: "gallery-20",
-    slug: "maintenance",
-    order: 20,
-    data: {
-      title: "Long-term maintenance",
-      note: "Ongoing care protocols established post-opening.",
-      image: {
-        src: img20,
-        alt: "Long-term maintenance.",
-        className: "object-center",
-      },
-    },
-  },
-  {
-    id: "gallery-21",
-    slug: "anniversary",
-    order: 21,
-    data: {
-      title: "Anniversary gathering",
-      note: "Annual community reunions at the completed site.",
-      image: {
-        src: img21,
-        alt: "Anniversary gathering.",
-        className: "object-center",
-      },
-    },
-  },
-  {
-    id: "gallery-22",
-    slug: "night-event",
-    order: 22,
-    data: {
-      title: "Night event",
-      note: "Evening activations showing the space after dark.",
-      image: {
-        src: img22,
-        alt: "Night event.",
-        className: "object-center",
-      },
-    },
-  },
-  {
-    id: "gallery-23",
-    slug: "heritage-restoration",
-    order: 23,
-    data: {
-      title: "Heritage restoration",
-      note: "Careful preservation work carried out on historic structures.",
-      image: {
-        src: img23,
-        alt: "Heritage restoration process.",
-        className: "object-center",
-      },
-    },
-  },
-  {
-    id: "gallery-24",
-    slug: "visitor-space",
-    order: 24,
-    data: {
-      title: "Visitor space",
-      note: "Open and welcoming areas designed for public interaction.",
-      image: {
-        src: img24,
-        alt: "Visitor gathering area.",
-        className: "object-center",
-      },
-    },
-  },
-  {
-    id: "gallery-25",
-    slug: "cultural-programme",
-    order: 25,
-    data: {
-      title: "Cultural programme",
-      note: "Events and performances activating the shared public space.",
-      image: {
-        src: img25,
-        alt: "Cultural programme event.",
-        className: "object-center",
-      },
-    },
-  },
-  {
-    id: "gallery-26",
-    slug: "design-detail",
-    order: 26,
-    data: {
-      title: "Design detail",
-      note: "Close-up moments highlighting craftsmanship and materiality.",
-      image: {
-        src: img26,
-        alt: "Architectural design detail.",
-        className: "object-center",
-      },
-    },
-  },
-  {
-    id: "gallery-27",
-    slug: "pathway-development",
-    order: 27,
-    data: {
-      title: "Pathway development",
-      note: "Accessible circulation routes integrated into the environment.",
-      image: {
-        src: img27,
-        alt: "Pathway construction and development.",
-        className: "object-center",
-      },
-    },
-  },
-  {
-    id: "gallery-28",
-    slug: "green-space",
-    order: 28,
-    data: {
-      title: "Green space",
-      note: "Natural planting areas enhancing the ecological setting.",
-      image: {
-        src: img28,
-        alt: "Green landscaped environment.",
-        className: "object-center",
-      },
-    },
-  },
-  {
-    id: "gallery-29",
-    slug: "site-progress",
-    order: 29,
-    data: {
-      title: "Site progress",
-      note: "Ongoing construction and development milestones documented.",
-      image: {
-        src: img29,
-        alt: "Construction progress on site.",
-        className: "object-center",
-      },
-    },
-  },
-  {
-    id: "gallery-30",
-    slug: "community-meet",
-    order: 30,
-    data: {
-      title: "Community meet",
-      note: "Open discussions and planning sessions with residents.",
-      image: {
-        src: img30,
-        alt: "Community discussion gathering.",
-        className: "object-center",
-      },
-    },
-  },
-  {
-    id: "gallery-31",
-    slug: "educational-tour",
-    order: 31,
-    data: {
-      title: "Educational tour",
-      note: "Student and visitor walkthroughs across the completed project.",
-      image: {
-        src: img31,
-        alt: "Educational site tour.",
-        className: "object-center",
-      },
-    },
-  },
-  {
-    id: "gallery-32",
-    slug: "public-art",
-    order: 32,
-    data: {
-      title: "Public art",
-      note: "Creative installations enriching the cultural identity of the site.",
-      image: {
-        src: img32,
-        alt: "Public art installation.",
-        className: "object-center",
-      },
-    },
-  },
-  {
-    id: "gallery-33",
-    slug: "ceremonial-lighting",
-    order: 33,
-    data: {
-      title: "Ceremonial lighting",
-      note: "Special lighting arrangements during public celebrations.",
-      image: {
-        src: img33,
-        alt: "Ceremonial lighting setup.",
-        className: "object-center",
-      },
-    },
-  },
-  {
-    id: "gallery-34",
-    slug: "project-review",
-    order: 34,
-    data: {
-      title: "Project review",
-      note: "Final inspections and quality evaluation sessions.",
-      image: {
-        src: img34,
-        alt: "Project review meeting.",
-        className: "object-center",
-      },
-    },
-  },
-  {
-    id: "gallery-35",
-    slug: "community-space",
-    order: 35,
-    data: {
-      title: "Community space",
-      note: "Shared environments supporting social interaction and engagement.",
-      image: {
-        src: img35,
-        alt: "Open community gathering space.",
-        className: "object-center",
-      },
-    },
-  },
-  {
-    id: "gallery-36",
-    slug: "final-showcase",
-    order: 36,
-    data: {
-      title: "Final showcase",
-      note: "Completed project highlights presented to the public.",
-      image: {
-        src: img36,
-        alt: "Final showcase and presentation event.",
-        className: "object-center",
-      },
-    },
-  },
-];
 
 const INTERVAL_MS = 15000;
 
-function advance(prev: number) {
-  return (prev + 1) % images.length;
+function advance(prev: number, itemCount: number) {
+  return (prev + 1) % itemCount;
 }
 
-export default function GalleryGrid() {
+type GalleryGridProps = {
+  items: ManagedEntry<GalleryEntryContent>[];
+};
+
+export default function GalleryGrid({ items }: GalleryGridProps) {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(true);
   const [isFading, setIsFading] = useState(false);
@@ -602,12 +58,12 @@ export default function GalleryGrid() {
 
   // ── restart interval after any manual nav ────────────────────────────────
   const restartTimer = () => {
-    if (!isPlaying) return;
+    if (!isPlaying || items.length === 0) return;
     timerRef.current = setInterval(() => {
       setIsFading(true);
       setTimeout(() => {
         setActiveIndex((p) => {
-          const n = advance(p);
+          const n = advance(p, items.length);
           scrollActiveThumbIntoView(n);
           return n;
         });
@@ -619,12 +75,12 @@ export default function GalleryGrid() {
 
   // ── auto-advance ─────────────────────────────────────────────────────────
   useEffect(() => {
-    if (!isPlaying) return;
+    if (!isPlaying || items.length === 0) return;
     timerRef.current = setInterval(() => {
       setIsFading(true);
       setTimeout(() => {
         setActiveIndex((p) => {
-          const n = advance(p);
+          const n = advance(p, items.length);
           scrollActiveThumbIntoView(n);
           return n;
         });
@@ -633,11 +89,15 @@ export default function GalleryGrid() {
       }, 280);
     }, INTERVAL_MS);
     return () => { if (timerRef.current) clearInterval(timerRef.current); };
-  }, [isPlaying]);
+  }, [isPlaying, items.length]);
+
+  useEffect(() => {
+    setActiveIndex(0);
+  }, [items]);
 
   const handleThumbClick = (i: number) => { transitionTo(i); setTimeout(restartTimer, 300); };
-  const handlePrev = () => { const n = (activeIndex - 1 + images.length) % images.length; transitionTo(n); setTimeout(restartTimer, 300); };
-  const handleNext = () => { const n = advance(activeIndex); transitionTo(n); setTimeout(restartTimer, 300); };
+  const handlePrev = () => { const n = (activeIndex - 1 + items.length) % items.length; transitionTo(n); setTimeout(restartTimer, 300); };
+  const handleNext = () => { const n = advance(activeIndex, items.length); transitionTo(n); setTimeout(restartTimer, 300); };
   const togglePlay  = () => {
     setIsPlaying((prev) => {
       if (prev && timerRef.current) clearInterval(timerRef.current);
@@ -645,7 +105,15 @@ export default function GalleryGrid() {
     });
   };
 
-  const active = images[activeIndex];
+  if (items.length === 0) {
+    return (
+      <div className="rounded-[1.5rem] border border-[var(--line)] bg-[var(--accent-soft)] p-8 text-sm text-[var(--muted)]">
+        No gallery items have been published yet.
+      </div>
+    );
+  }
+
+  const active = items[activeIndex] ?? items[0];
 
   return (
     <>
@@ -702,7 +170,7 @@ export default function GalleryGrid() {
 
           {/* Counter — top left */}
           <div className="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-black/35 border border-white/15 text-white text-[11px] font-medium tabular-nums">
-            {String(activeIndex + 1).padStart(2, "0")} / {String(images.length).padStart(2, "0")}
+            {String(activeIndex + 1).padStart(2, "0")} / {String(items.length).padStart(2, "0")}
           </div>
 
           {/* Meta — bottom */}
@@ -741,7 +209,7 @@ export default function GalleryGrid() {
             sm:contents
             md:grid md:grid-cols-3 lg:grid-cols-4 md:gap-2 md:pr-0.5
           ">
-            {images.map((img, i) => (
+            {items.map((img, i) => (
               <button
                 key={img.id}
                 ref={(el) => { thumbRefs.current[i] = el; }}
@@ -794,3 +262,4 @@ export default function GalleryGrid() {
     </>
   );
 }
+

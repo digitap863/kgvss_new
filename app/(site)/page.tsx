@@ -3,10 +3,15 @@ import ContactSheet from "@/components/site/contact-sheet";
 import GalleryGrid from "@/components/site/gallery-grid";
 import HomeHero from "@/components/site/home-hero";
 import ProjectShowcase from "@/components/site/project-showcase";
-import { getSiteSettings } from "@/lib/data-fetch";
+import { getGalleryEntries, getSiteSettings } from "@/lib/data-fetch";
+
+export const dynamic = "force-dynamic";
 
 export default async function Home() {
-  const settings = await getSiteSettings();
+  const [settings, galleryEntries] = await Promise.all([
+    getSiteSettings(),
+    getGalleryEntries(),
+  ]);
 
   return (
     <div className="pb-10 sm:pb-14">
@@ -22,7 +27,7 @@ export default async function Home() {
             </h2>
           </div>
         </div>
-        <GalleryGrid />
+        <GalleryGrid items={galleryEntries} />
       </section>
       <ContactSheet settings={settings} />
     </div>
