@@ -25,9 +25,9 @@ export const siteSettings: SiteSettings = {
     "A homepage-first showcase for rural sanitation, water conservation, and field implementation work.",
   longDescription:
     "KGVSS works across rural sanitation, water conservation, field coordination, and community-facing implementation in Kerala. The digital experience is designed as a calm visual showcase so the work feels tangible, not buried under institutional clutter.",
-  location: "Thiruvananthapuram, Kerala, India",
+  location: "Raj Bhavan Palace, Temple West Gate, Near Kalikotta Palace, Thiripunithura, Ernakulam, Kerala, Pin : 682301",
   email: "info@kgvss-kerala.org",
-  phone: "+91 471 2345678",
+  phone: "+91 90373 57215",
   logo: {
     src: logo,
     alt: "KGVSS logo with Gandhian portrait and circular wordmark.",

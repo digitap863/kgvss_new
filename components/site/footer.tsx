@@ -20,25 +20,14 @@ const footerContact = {
   emails: ["info@keralagvssociety.com", "secretarykgvss@gmail.com"],
   phones: [
     "+91 90373 57215",
-    "+91 95262 88250",
-    "+91 90487 35728",
-    "+91 90370 25900",
   ],
   offices: [
     {
-      title: "Thrissur Office",
+      title: "Central Region Office",
       lines: [
-        "Gramapanchayath Building",
-        "Vazhakkode, Mullurkkara",
-        "Thrissur, Kerala - 680580",
-      ],
-    },
-    {
-      title: "Cochin Office",
-      lines: [
-        "42/2905, Near Vennala Co-operative Bank Head Office",
-        "Arakadavu Road, Vennala P.O.",
-        "Cochin, Kerala - 682028",
+        "Raj Bhavan Palace, Temple West Gate,",
+        "Near Kalikotta Palace, Thiripunithura,",
+        "Ernakulam, Kerala, Pin : 682301",
       ],
     },
   ],
