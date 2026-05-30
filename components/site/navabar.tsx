@@ -74,12 +74,20 @@ export default function SiteHeader({ settings }: SiteHeaderProps) {
 
             <div className="flex items-center gap-2">
               <ButtonLink
-                href="/contact"
-                variant="primary"
-                className="hidden sm:inline-flex"
-              >
-                Connect
-              </ButtonLink>
+  href="https://wa.me/+919037357215"
+  variant="primary"
+  className="hidden sm:inline-flex items-center gap-2 whitespace-nowrap"
+>
+  {/* <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 32 32"
+    className="h-5 w-5 fill-current"
+  >
+    <path d="M16.001 3C8.82 3 3 8.82 3 16c0 2.54.74 5.02 2.14 7.14L3 29l5.99-2.09A12.93 12.93 0 0 0 16 29c7.18 0 13-5.82 13-13S23.18 3 16 3Zm0 23.67c-2.14 0-4.24-.57-6.08-1.66l-.43-.25-3.56 1.24 1.19-3.67-.28-.38A10.6 10.6 0 1 1 16 26.67Zm5.82-7.95c-.32-.16-1.87-.92-2.16-1.03-.29-.11-.5-.16-.71.16-.21.32-.82 1.03-1.01 1.24-.18.21-.37.24-.69.08-.32-.16-1.34-.49-2.56-1.57-.95-.85-1.59-1.9-1.78-2.22-.18-.32-.02-.49.14-.65.14-.14.32-.37.48-.56.16-.18.21-.32.32-.53.11-.21.05-.4-.03-.56-.08-.16-.71-1.71-.97-2.34-.26-.63-.52-.53-.71-.54h-.61c-.21 0-.56.08-.85.4-.29.32-1.11 1.08-1.11 2.64s1.14 3.06 1.3 3.27c.16.21 2.25 3.43 5.45 4.81.76.33 1.36.53 1.82.68.77.25 1.47.21 2.02.13.62-.09 1.87-.76 2.13-1.5.26-.74.26-1.37.18-1.5-.08-.13-.29-.21-.61-.37Z" />
+  </svg> */}
+
+  <span>Connect</span>
+</ButtonLink>
 
               <button
                 type="button"

@@ -134,7 +134,7 @@ export default function HomeHero() {
           <div className="flex min-h-[22rem] flex-col justify-between rounded-[2rem] bg-[rgba(255,250,244,0.72)] p-5 sm:p-7 lg:min-h-[34rem] lg:p-8">
             <div className="space-y-5">
               <span className="section-label">{hero.label}</span>
-              <h1 className="hero-title max-w-2xl text-balance text-[clamp(2.2rem,4.5vw,4.2rem)] leading-[0.96] text-[var(--foreground)]">
+              <h1 className="hero-title max-w-2xl text-balance text-[clamp(2.9rem,5.4vw,5rem)] leading-[0.98] text-[var(--foreground)]">
                 {hero.headline}
               </h1>
               <p className="max-w-lg text-pretty text-base leading-7 text-[var(--muted)] sm:text-lg">

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 
+import { headers } from "next/headers";
 import AdminSidebar from "@/components/admin/admin-sidebar";
 
 export const metadata: Metadata = {
@@ -11,11 +12,19 @@ export const metadata: Metadata = {
   },
 };
 
-export default function AdminLayout({
+export default async function AdminLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const headersList = await headers();
+  const pathname = headersList.get("x-pathname") || "";
+  const isLoginPage = pathname === "/admin/login";
+
+  if (isLoginPage) {
+    return <>{children}</>;
+  }
+
   return (
     <main className="min-h-screen bg-[#f7f8fb] text-[#15171a] md:flex">
       <AdminSidebar />

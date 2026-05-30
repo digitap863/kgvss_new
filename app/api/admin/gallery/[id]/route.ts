@@ -36,7 +36,6 @@ export async function PATCH(request: Request, context: RouteParams) {
     const title = String(formData.get("title") ?? "").trim();
     const note = String(formData.get("note") ?? "").trim();
     const imageAlt = String(formData.get("imageAlt") ?? title).trim();
-    const category = String(formData.get("category") ?? "").trim();
     const status = String(formData.get("status") ?? "published");
     const image = formData.get("image");
 
@@ -55,7 +54,6 @@ export async function PATCH(request: Request, context: RouteParams) {
     item.slug = await getUniqueGallerySlug(createSlug(title), id);
     item.note = note;
     item.imageAlt = imageAlt;
-    item.category = category;
     item.status = status;
 
     if (image instanceof File && image.size > 0) {
