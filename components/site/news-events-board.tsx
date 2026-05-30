@@ -32,6 +32,32 @@ export default function NewsEventsBoard({ items }: NewsEventsBoardProps) {
     };
   }, [activeItem]);
 
+  if (!items || items.length === 0) {
+    return (
+      <div className="flex flex-col items-center justify-center rounded-2xl border border-[var(--line)] border-dashed bg-[rgba(255,250,244,0.4)] p-16 text-center shadow-[var(--shadow-soft)]">
+        <svg
+          className="h-12 w-12 text-[var(--muted)] opacity-60"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={1.5}
+            d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"
+          />
+        </svg>
+        <h3 className="mt-4 text-xl font-semibold tracking-[-0.02em] text-[var(--foreground)]">
+          No Updates Available
+        </h3>
+        <p className="mt-2 max-w-md text-pretty text-sm leading-6 text-[var(--muted)]">
+          There are no news or event updates published at the moment. Please check back later for updates on our field activities.
+        </p>
+      </div>
+    );
+  }
+
   return (
     <>
       <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">

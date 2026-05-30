@@ -24,10 +24,26 @@ export default function ContactForm({ settings }: { settings?: any } = {}) {
     e.preventDefault();
     setFormState("submitting");
 
-    // Replace with your actual form submission logic (e.g. API route, Resend, Formspree)
-    await new Promise((res) => setTimeout(res, 1500));
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(form),
+      });
 
-    setFormState("success");
+      const data = await response.json();
+
+      if (response.ok && data.success) {
+        setFormState("success");
+      } else {
+        setFormState("error");
+      }
+    } catch (error) {
+      console.error("Submission failed:", error);
+      setFormState("error");
+    }
   };
 
   if (formState === "success") {
