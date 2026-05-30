@@ -112,7 +112,7 @@ export default function SiteFooter({ settings }: SiteFooterProps) {
             </div>
           </div>
 
-          <div className="grid gap-6 border-t border-[var(--line)] pt-8 sm:grid-cols-2 lg:col-span-2">
+          {/* <div className="grid gap-6 border-t border-[var(--line)] pt-8 sm:grid-cols-2 lg:col-span-2">
             {footerContact.offices.map((office) => (
               <address key={office.title} className="not-italic">
                 <p className="text-sm font-semibold uppercase tracking-[0.16em] text-[var(--muted-soft)]">
@@ -125,7 +125,7 @@ export default function SiteFooter({ settings }: SiteFooterProps) {
                 </div>
               </address>
             ))}
-          </div>
+          </div> */}
         </div>
 
         <div className="mt-12 flex flex-col gap-2 border-t border-[var(--line)] pt-6 text-sm text-[var(--muted-soft)] sm:flex-row sm:items-center sm:justify-between">

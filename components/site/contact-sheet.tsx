@@ -28,7 +28,8 @@ const contact = {
       title: "Central Region Office",
       lines: [
         "Kerala Grama Vikasana Sanitation Society",
-        "Raj Bhavan Palace, Temple West Gate,",
+        "Raj Bhavan Palace,",
+        "Temple West Gate,",
         "Near Kalikotta Palace, Thiripunithura,",
         "Ernakulam, Kerala, Pin : 682301"
       ]
@@ -83,58 +84,54 @@ export default function ContactSheet({ settings: _settings }: ContactSheetProps)
           </div>
 
           {/* Right: addresses + phones + emails */}
-          <div className="flex flex-col gap-5">
-
-            {/* Addresses row */}
-            <div className="grid grid-cols-1 gap-5 sm:grid-cols-3">
-              {contact.addresses?.map((address, idx) => (
-                <div key={idx} className="text-sm leading-6 text-white/80">
-                  <p className="mb-1 text-xs font-semibold uppercase tracking-wider text-white/50">
-                    {address.title}
-                  </p>
-                  {address.lines.map((line, lineIdx) => (
-                    <p key={lineIdx}>{line}</p>
-                  ))}
-                </div>
-              ))}
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-3 lg:gap-8">
+            {/* Address */}
+            <div className="text-sm leading-6 text-white/80">
+              <p className="mb-2 text-xs font-semibold uppercase tracking-wider text-white/50">
+                {contact.addresses[0].title}
+              </p>
+              <div className="space-y-1">
+                {contact.addresses[0].lines.map((line, idx) => (
+                  <p key={idx}>{line}</p>
+                ))}
+              </div>
             </div>
 
-            {/* Divider */}
-            <div className="border-t border-white/10" />
-
-            {/* Phones + Emails row */}
-            <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
+            {/* Phone */}
+            <div className="flex flex-col gap-2">
+              <p className="text-xs font-semibold uppercase tracking-wider text-white/50">
+                Phone
+              </p>
               <div className="flex flex-col gap-1">
-                <p className="mb-1 text-xs font-semibold uppercase tracking-wider text-white/50">
-                  Phone
-                </p>
                 {contact.phones?.map((phone) => (
                   <Link
                     key={phone}
                     href={`tel:${phone.replace(/\s+/g, "")}`}
-                    className="text-sm text-white/90 hover:text-white"
+                    className="text-sm text-white/90 hover:text-white transition-colors"
                   >
                     {phone}
                   </Link>
                 ))}
               </div>
+            </div>
 
+            {/* Email */}
+            <div className="flex flex-col gap-2">
+              <p className="text-xs font-semibold uppercase tracking-wider text-white/50">
+                Email
+              </p>
               <div className="flex flex-col gap-1">
-                <p className="mb-1 text-xs font-semibold uppercase tracking-wider text-white/50">
-                  Email
-                </p>
                 {contact.emails?.map((email) => (
                   <Link
                     key={email}
                     href={`mailto:${email}`}
-                    className="text-sm text-white/90 hover:text-white"
+                    className="text-sm text-white/90 hover:text-white transition-colors"
                   >
                     {email}
                   </Link>
                 ))}
               </div>
             </div>
-
           </div>
         </div>
       </div>
